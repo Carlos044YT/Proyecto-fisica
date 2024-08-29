@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Jacquard+12+Charted&family=Libre+Barcode+39+Extended+Text&family=Playwrite+US+Trad:wght@100..400&family=Press+Start+2P&family=Protest+Revolution&family=Rubik+Glitch+Pop&family=Rubik+Moonrocks&family=Sixtyfour&display=swap');
+
+/* Diseño para fondo y eliminar decoracion de lista  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgb(126, 167, 165);
+    background: linear-gradient(90deg, rgba(126, 167, 165, 1) 5%, rgba(80, 180, 186, 1) 55%, rgba(0, 168, 255, 1) 99%);
+    background-size: cover;
+    background-position: center;
+}
+
+form,
+h1 {
+    text-align: center;
+    font-family: cursive;
+}
+
+h2 {
+    font-family: "Playwrite US Trad", cursive;
+    font-optical-sizing: auto;
+}
+
+#results {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+a:hover {
+    color: rgba(255, 166, 0, 0.717);
+}
+
+/* Diseño de la calculadora */
+
+.contenido1{
+    width: 500px;
+    background: #0d2033;
+    color: #fff;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.contenido .contenido1 input{
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #efefef;
+    outline: none;
+    padding: 10px 0;
+    font-size: 16px;
+    width: 85%;
+}
+
+.contenido .contenido1 .btn_input input{
+    width: 50%;
+    background: #0e4787;
+    border: 5px;
+    outline: auto;
+}
+
+@media(max-width:610px){
+    
+    .contenido1{
+        width: 80%;
+        background: #0d2033;
+        color: #fff;
+        border-radius: 15px;
+    }
+    
+    .contenido .contenido1 .btn_input input{
+        width: 60%;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+/* Diseño del header */
+
+.resaltar{
+    color: rgba(255, 166, 0, 0.717);
+    font-weight: bold;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    -webkit-backdrop-filter: blur(20px); /* Para Safari */
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    backdrop-filter: blur(20px);
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: orange;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: transparent;
+    -webkit-backdrop-filter: blur(20px); /* Para Safari */
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Diseño por si no soporta el backdrop-filter y lo cambie por una semitransparente */
+.no-dropdown_menu .dropdown_menu {
+    background: rgba(13, 32, 51); /* Fallback para navegadores sin soporte */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+.dropdown_menu.open {
+    height: 150px;
+}
+
+.dropdown_menu li {
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Diseño para hacer responsive el header */
+@media(max-width: 992px) {
+
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media(max-width: 430px) {
+
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+        width: 90%;
+        position: absolute;
+        left: 5.5%;
+        top: 60px;
+    }
+
+    .navbar .action_btn {
+        width: 90%;
+    }
+
+}
+
+/* Diseño del pie de pagina */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.pie-pagina {
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+/* Diseño del contenido */
+.contenido {
+    flex: 1;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+/* hacer responsive el video */
+@media (max-width:660px){
+    iframe{
+    width: 70%;
+    height: 40%;
+    }
+}

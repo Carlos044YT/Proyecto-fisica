@@ -1,0 +1,2 @@
+# Fisica en todo nuestro alrededor
+Proyecto para la materia de Fisica 1 en recursamientos, este proyecto esta diseñado para explicar la primera Ley de Newton: Ley de la inercia, con una maqueta que en este caso es un camión de carton el cuál vamos a simular ser pasajeros para explicar esta ley, dando importancia a que hasta en cosas diarias como estar en una auto o camión podemos percibir esta ley  
